@@ -5,6 +5,7 @@ from tkinter import ttk
 import csv
 from pathlib import Path
 courses = {
+    "Профессиональная подготовка по профессии рабочего  'Животновод'": "ПО Животновод",
 
 }
 
@@ -40,7 +41,7 @@ def get_entry4():
     entry6.insert(0, ("Zz-12345"))
     value5 = entry5.get()
     value6 = entry6.get()
-    value8 = (last_name + '-' + name + '-' + father_name + "@mail.ru").lower()
+    value8 = (last_name + "-PK-2022@mail.ru").lower()
     a = courses[f'{value4}']
     entry7.delete(0, tk.END)
     entry7.insert(0, a)
@@ -107,7 +108,6 @@ tk.Label(window, text='краткое_название_курса',
          anchor='w',
          relief=tk.RAISED) \
     .place(x=0, y=290)
-
 combo_up = tuple(sorted(courses.keys()))
 combo_down = courses.values()
 entry1 = tk.Entry(window, font=('Arial', 14), width=122)
